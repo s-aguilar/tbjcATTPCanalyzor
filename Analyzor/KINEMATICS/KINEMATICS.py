@@ -1,9 +1,9 @@
 import math
 import random
-from P4VECTOR import P4VECTOR
-_KINEMATICS__constant_u = 1.66e-27
-_KINEMATICS__constant_MeV = 1.6e-13
-_KINEMATICS__constant_e = 1.6e-19
+from Analyzor.KINEMATICS.P4VECTOR import P4VECTOR
+_KINEMATICS__constant_u = 1.66054e-27
+_KINEMATICS__constant_MeV = 1.6021764e-13
+_KINEMATICS__constant_e = 1.6021764e-19
 _KINEMATICS__constant_c = 3.0e8
 
 class KINEMATICS:
@@ -88,10 +88,10 @@ class KINEMATICS:
         tmp1 = E3_0_tmp*E3_0_tmp+E2_0_tmp*E2_0_tmp-Etot_tmp*Etot_tmp
 
         if(tmp1>0):
-            print "************************"
-            print "what the heck r u doing?"
-            print "************************"
-            raise Exception("I know shit!")
+            print("************************")
+            print("what the heck r u doing?")
+            print("************************")
+            raise Exception("I know python!")
 
         tmp2 = 2*E3_0_tmp*E2_0_tmp
 

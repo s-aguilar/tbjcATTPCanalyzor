@@ -8,12 +8,12 @@ class P4VECTOR():
     @staticmethod
     def AMATRIX(beta):
         if(abs(beta)>=1):
-            print "************************"
-            print "what the heck r u doing?"
-            print "************************"
-            raise Exception("I know python!")           
+            print("************************")
+            print("what the heck r u doing?")
+            print("************************")
+            raise Exception("I know python!")
         A = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
-        
+
         gamma = 1/math.sqrt(1-beta*beta)
         A[0][0] = A[3][3] = gamma
         A[1][1] = A[2][2] = 1
@@ -23,17 +23,17 @@ class P4VECTOR():
 
 
     def __init__(self,*args):
-        
+
         if(not(len(args)==2  and args[1]<__constant_c) and len(args)!=0 and len(args)!=4):
-            print "************************"
-            print "what the heck r u doing?"
-            print "************************"
+            print("************************")
+            print("what the heck r u doing?")
+            print("************************")
             raise Exception("I know python!")
-        
+
         if(len(args)==0):
             self.array = np.matrix([0,0,0,0]).getT()
             return
-        
+
         if(len(args)==4):
             self.array = np.matrix(args).getT()
             return
@@ -56,4 +56,4 @@ class P4VECTOR():
 
 #A = P4VECTOR.AMATRIX(0.1)
 #p4 =  P4VECTOR(1,0)
-#print p4.boost(A)
+#print (p4.boost(A))
